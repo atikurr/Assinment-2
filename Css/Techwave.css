@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@layer utilities {
+  /* Custom font */
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+
+:root {
+  /* nav colors */
+  --gradient-primary: linear-gradient(
+    90deg,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+  );
+
+  --gradient-secondary: linear-gradient(
+    47.64deg,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+  );
+
+  /*  Background Colors */
+  --bg-color: #1a0b2e;
+  --bg-chooses: #230e3d;
+  --card-chooses: #351165;
+
+  /*  Text Color  */
+  --text-primary: #ffffff;
+  --text-green: rgba(0, 255, 136, 1);
+
+  /*  Border / Divider  */
+  --border-color: rgba(65, 37, 103, 1);
+  --btn-border: rgba(0, 255, 136, 1);
+
+  /* box shadow */
+  --box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+}
+
+/* Custom gradient */
+@layer utilities {
+  /* Custom gradient */
+  .gradient-primary-text {
+    background: var(--gradient-primary);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gradient-button {
+    background: var(--gradient-secondary);
+  }
+
+  /* background image */
+  .bg-image {
+    background: url(../images/hero-bg.png);
+    background-size: 100% 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  /* hero imge */
+  .hero-img {
+    background: url(../images/hero-circle.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* width: 320px; */
+    height: 320px;
+  }
+
+  /* footer image */
+  .footer-img {
+    background: url(../images/footer-bg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/*animation */
+.mic {
+  animation: floating-mic 3s ease-in-out infinite;
+}
+
+@keyframes floating-mic {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(4px) rotate(-2deg);
+  }
+}
